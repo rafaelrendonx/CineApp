@@ -40,13 +40,15 @@ var _graphql = require('./src/graphql');
 
 var _graphql2 = _interopRequireDefault(_graphql);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
 var JsonParser = _bodyParser2.default.json();
 
 //Configuración Inicial
 var app = (0, _express2.default)();
-var PORT = process.env.PORT || 3000;
+var port = process.env.Port || 3000;
 
 _mongoose2.default.connect('mongodb://rafaelrendonx:a1b2c3d4@ds111492.mlab.com:11492/netflixclone');
 
@@ -58,8 +60,8 @@ db.on('error', function () {
     return console.log('Connected to MongoDB');
 });
 
-app.listen(PORT, function () {
-    console.log('Server Works On PORT 3000');
+app.listen(port, function () {
+    console.log('Server Works On Port 3000');
 });
 
 app.use((0, _cors2.default)());

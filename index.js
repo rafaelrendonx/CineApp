@@ -14,7 +14,7 @@ const JsonParser = bodyParser.json();
 
 //Configuración Inicial
 const app = express();
-const port = process.env.Port || 3000;
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect('mongodb://rafaelrendonx:a1b2c3d4@ds111492.mlab.com:11492/netflixclone');
 
@@ -24,8 +24,8 @@ db.on('error', () => console.log('Failed to connect to MongoDB'))
   .once('open', () => console.log('Connected to MongoDB'));
 
 
-app.listen(port, () => {
-    console.log('Server Works On Port 3000');
+app.listen(PORT, () => {
+    console.log('Server Works On PORT 3000');
 })
 
 app.use((cors()));
