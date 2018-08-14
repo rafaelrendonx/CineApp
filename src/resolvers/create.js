@@ -28,16 +28,13 @@ export const createToken = (email,password) => {
                     const token = jwt.sign(payload, secret, {
                         expiresIn
                     })
-
                     resolve(token)
                 }
-
                 else{
                     reject(false)
                 }
             })
         })
-
         return compare
     }).catch()
     return user

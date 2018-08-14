@@ -96,7 +96,7 @@ app.post('/register', JsonParser, (req, res) => {
     })
 });
 
-//Endpoit de Login
+//Endpoint de Login
 
 app.use('/login', JsonParser, (req, res) => {
     if(req.method === 'POST'){

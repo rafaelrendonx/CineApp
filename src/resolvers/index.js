@@ -1,7 +1,7 @@
-import CreateToken from './create';
-import VerifyToken from './verify';
+import createToken from './create';
+import verifyToken from './verify';
 
 export default {
-    CreateToken,
-    VerifyToken
+    createToken,
+    verifyToken
 }

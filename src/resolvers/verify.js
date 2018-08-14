@@ -19,7 +19,7 @@ export const verifyToken = (token) => {
             throw new Error('INVALID TOKEN') // INVALID TOKEN
         }else{
             user = User.findOne({'_id':data.id}).exec()
-                .then(res=>{
+                .then(res => {
                     return resolve(res);
                 })
                 .catch(err => {
