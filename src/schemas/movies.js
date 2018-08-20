@@ -26,7 +26,7 @@ const MovieSchema = new Schema({
         ref: 'Genres'
     },
     'rank':{
-        type: String,
+        type: [Number],
         require: true
     },
     'synopsis':{
