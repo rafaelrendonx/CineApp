@@ -1,9 +1,9 @@
 import addGenre from './add';
-import UpdateGenre from './update';
+import updateGenre from './update';
 import deleteGenre from './delete'
 
 export default{
     addGenre,
-    UpdateGenre,
+    updateGenre,
     deleteGenre
 }

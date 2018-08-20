@@ -20,6 +20,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
     addGenre: _add2.default,
-    UpdateGenre: _update2.default,
+    updateGenre: _update2.default,
     deleteGenre: _delete2.default
 };

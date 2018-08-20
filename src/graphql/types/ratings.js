@@ -17,7 +17,7 @@ export const RatingType = new graphql.GraphQLObjectType({
 })
 
 export const RatingUserType = new graphql.GraphQLInputObjectType({
-    name: "AddRatigs",
+    name: "AddRatings",
     description: "Types of add Ratings",
     fields: () => ({
         name: {

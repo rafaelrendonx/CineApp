@@ -15,6 +15,6 @@ var _verify2 = _interopRequireDefault(_verify);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-    CreateToken: _create2.default,
-    VerifyToken: _verify2.default
+    createToken: _create2.default,
+    verifyToken: _verify2.default
 };

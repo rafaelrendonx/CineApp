@@ -20,6 +20,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
     addRating: _add2.default,
-    UpdateRating: _update2.default,
+    updateRating: _update2.default,
     deleteRating: _delete2.default
 };

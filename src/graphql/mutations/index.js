@@ -1,5 +1,9 @@
-import Genres from './genres';
+import genres from './genres';
+import ratings from './ratings';
+import movies from './movies';
 
 export default {
-    ...Genres
+    ...genres,
+    ...ratings,
+    ...movies
 }

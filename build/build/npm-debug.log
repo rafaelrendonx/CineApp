@@ -1,18 +1,19 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run-script', 'build' ]
 2 info using npm@3.5.2
 3 info using node@v8.10.0
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info lifecycle backend@1.0.0~prestart: backend@1.0.0
-6 silly lifecycle backend@1.0.0~prestart: no script for prestart, continuing
-7 info lifecycle backend@1.0.0~start: backend@1.0.0
-8 verbose lifecycle backend@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle backend@1.0.0~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/rafael/Documents/Cinta Negra/CineApp/backend/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-10 verbose lifecycle backend@1.0.0~start: CWD: /home/rafael/Documents/Cinta Negra/CineApp/backend
-11 silly lifecycle backend@1.0.0~start: Args: [ '-c', 'node ./build/index.js' ]
-12 silly lifecycle backend@1.0.0~start: Returned: code: 1  signal: null
-13 info lifecycle backend@1.0.0~start: Failed to exec start script
-14 verbose stack Error: backend@1.0.0 start: `node ./build/index.js`
+4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+5 info lifecycle backend@1.0.0~prebuild: backend@1.0.0
+6 silly lifecycle backend@1.0.0~prebuild: no script for prebuild, continuing
+7 info lifecycle backend@1.0.0~build: backend@1.0.0
+8 verbose lifecycle backend@1.0.0~build: unsafe-perm in lifecycle true
+9 verbose lifecycle backend@1.0.0~build: PATH: /usr/share/npm/bin/node-gyp-bin:/home/rafael/Documents/Cinta Negra/CineApp/backend/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+10 verbose lifecycle backend@1.0.0~build: CWD: /home/rafael/Documents/Cinta Negra/CineApp/backend
+11 silly lifecycle backend@1.0.0~build: Args: [ '-c',
+11 silly lifecycle   'babel -d ./build . --ignore node_modules --copy-files' ]
+12 silly lifecycle backend@1.0.0~build: Returned: code: 1  signal: null
+13 info lifecycle backend@1.0.0~build: Failed to exec build script
+14 verbose stack Error: backend@1.0.0 build: `babel -d ./build . --ignore node_modules --copy-files`
 14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/lib/utils/lifecycle.js:232:16)
 14 verbose stack     at emitTwo (events.js:126:13)
@@ -24,19 +25,19 @@
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
 15 verbose pkgid backend@1.0.0
 16 verbose cwd /home/rafael/Documents/Cinta Negra/CineApp/backend
-17 error Linux 4.15.0-30-generic
-18 error argv "/usr/bin/node" "/usr/bin/npm" "start"
+17 error Linux 4.15.0-32-generic
+18 error argv "/usr/bin/node" "/usr/bin/npm" "run-script" "build"
 19 error node v8.10.0
 20 error npm  v3.5.2
 21 error code ELIFECYCLE
-22 error backend@1.0.0 start: `node ./build/index.js`
+22 error backend@1.0.0 build: `babel -d ./build . --ignore node_modules --copy-files`
 22 error Exit status 1
-23 error Failed at the backend@1.0.0 start script 'node ./build/index.js'.
+23 error Failed at the backend@1.0.0 build script 'babel -d ./build . --ignore node_modules --copy-files'.
 23 error Make sure you have the latest version of node.js and npm installed.
 23 error If you do, this is most likely a problem with the backend package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
-23 error     node ./build/index.js
+23 error     babel -d ./build . --ignore node_modules --copy-files
 23 error You can get information on how to open an issue for this project with:
 23 error     npm bugs backend
 23 error Or if that isn't available, you can get their info via:

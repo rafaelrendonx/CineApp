@@ -11,7 +11,7 @@ export default{
         },
         data:{
             name: 'data',
-            type: new grapql.GraphQLNonNull(RatingInputType)
+            type: new graphql.GraphQLNonNull(RatingInputType)
         }
     },
     resolve (root, params){

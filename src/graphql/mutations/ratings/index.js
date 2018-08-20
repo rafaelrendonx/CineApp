@@ -1,9 +1,9 @@
 import addRating from './add';
-import UpdateRating from './update';
+import updateRating from './update';
 import deleteRating from './delete';
 
 export default{
     addRating,
-    UpdateRating,
+    updateRating,
     deleteRating
 }
