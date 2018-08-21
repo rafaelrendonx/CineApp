@@ -24,7 +24,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
     addMovie: _add2.default,
-    UpdateMovie: _update2.default,
+    updateMovie: _update2.default,
     deleteMovie: _delete2.default,
     addRank: _addRank2.default
 };

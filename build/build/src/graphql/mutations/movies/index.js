@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _add = require('/add');
+var _add = require('./add');
 
 var _add2 = _interopRequireDefault(_add);
 

@@ -22,7 +22,7 @@ var MovieSchema = new Schema({
         require: true
     },
     'year': {
-        type: Date,
+        type: String,
         require: true
     },
     'rating': {

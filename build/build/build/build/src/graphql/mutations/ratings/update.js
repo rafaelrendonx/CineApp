@@ -49,7 +49,7 @@ exports.default = {
         },
         data: {
             name: 'data',
-            type: new grapql.GraphQLNonNull(_ratings3.RatingInputType)
+            type: new graphql.GraphQLNonNull(_ratings3.RatingInputType)
         }
     },
     resolve: function resolve(root, params) {
