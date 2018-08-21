@@ -52,7 +52,7 @@ var MovieType = exports.MovieType = new graphql.GraphQLObjectType({
                 type: graphql.GraphQLString
             },
             year: {
-                type: graphql.GraphQLInt
+                type: graphql.GraphQLString
             },
             rating: {
                 type: _ratings.RatingType,
@@ -69,6 +69,9 @@ var MovieType = exports.MovieType = new graphql.GraphQLObjectType({
 
                     return _genres3.default.findbyiD(genre).exec();
                 }
+            },
+            rank: {
+                type: graphql.GraphQLList(graphql.GraphQLFloat)
             },
             synopsis: {
                 type: graphql.GraphQLString
@@ -97,10 +100,7 @@ var MovieInputType = exports.MovieInputType = new graphql.GraphQLInputObjectType
                 type: graphql.GraphQLString
             },
             year: {
-                type: graphql.GraphQLInt
-            },
-            rank: {
-                type: graphql.GraphQLList(graphql.GraphQLFloat)
+                type: graphql.GraphQLString
             },
             rating: {
                 type: graphql.GraphQLString
