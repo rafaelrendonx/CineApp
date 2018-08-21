@@ -1,6 +1,6 @@
-import Movie from '../../../schemas/genres';
+import Movie from '../../../schemas/movies';
 import { MovieType, MovieInputType } from '../../types/movies';
-import * as graphql from 'graphql'
+import * as graphql from 'graphql';
 
 export default{
     type: MovieType,
@@ -11,7 +11,7 @@ export default{
         },
         data:{
             name:'data',
-            type: new graq.GraphQLNonNull(MovieInputType)
+            type: new graphql.GraphQLNonNull(MovieInputType)
         }
     },
     resolve(root, params){

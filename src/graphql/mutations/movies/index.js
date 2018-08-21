@@ -1,4 +1,4 @@
-import addMovie from '/add';
+import addMovie from './add';
 import UpdateMovie from './update';
 import deleteMovie from './delete';
 import addRank from './addRank';

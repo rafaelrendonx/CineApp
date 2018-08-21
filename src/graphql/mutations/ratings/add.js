@@ -1,19 +1,22 @@
-import Rating from '../../../schemas/ratings';
+import { GraphQLNonNull } from 'graphql';
 import { RatingType, RatingInputType } from '../../types/ratings';
-import * as graphql from 'graphql';
+
+import RatingSchema from '../../../schemas/ratings';
 
 export default {
     type: RatingType,
     args:{
         data:{
             name:'data',
-            type: new graphql.GraphQLNonNull(RatingInputType)
+            type: new GraphQLNonNull(RatingInputType)
         }
     },
     resolve (root, params){
-        const rating = new Rating(params.data)
-        const newRating = rating.save();
-        if (!newRating) throw new Error("Error at creating rating")
+        const Rating = new RatingSchema(params.data)
+        const newRating = Rating.save();
+        if (!newRating) {
+            throw new Error("Error at creating rating")
+        }
         return newRating
     }
 }
