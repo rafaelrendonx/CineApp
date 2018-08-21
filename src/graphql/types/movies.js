@@ -18,21 +18,24 @@ export const MovieType = new graphql.GraphQLObjectType({
             type: graphql.GraphQLString
         },
         year:{
-            type: graphql.GraphQLInt
+            type: graphql.GraphQLString
         },
         rating:{
             type: RatingType,
             resolve(movie){
-                const {rating} = movie
+                const { rating } = movie
                 return Rating.findbyiD(rating).exec()
             }
         },
         genre:{
             type: GenreType,
             resolve(movie){
-                const {genre} = movie
+                const { genre } = movie
                 return Genre.findbyiD(genre).exec()
             }
+        },
+        rank: {
+            type: graphql.GraphQLList(graphql.GraphQLFloat)
         },
         synopsis:{
             type: graphql.GraphQLString
@@ -59,10 +62,7 @@ export const MovieInputType = new graphql.GraphQLInputObjectType({
             type: graphql.GraphQLString
         },
         year:{
-            type: graphql.GraphQLInt
-        },
-        rank: {
-            type: graphql.GraphQLList(graphql.GraphQLFloat)
+            type: graphql.GraphQLString
         },
         rating:{
             type: graphql.GraphQLString

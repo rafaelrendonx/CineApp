@@ -1,6 +1,7 @@
-import Movie from '../../../schemas/genres';
-import { MovieType, MovieInputType } from '../../types/movies';
 import * as graphql from 'graphql';
+import Movie from '../../../schemas/movies';
+import { MovieType, MovieInputType } from '../../types/movies';
+
 
 export default {
     type: MovieType,

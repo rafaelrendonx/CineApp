@@ -25,7 +25,7 @@ db.on('error', () => console.log('Failed to connect to MongoDB'))
 
 
 app.listen(PORT, () => {
-    console.log('Server Works On PORT 3000');
+    console.log('Server Works On PORT ',PORT);
 })
 
 app.use((cors()));
