@@ -8,10 +8,6 @@ var _mongoose = require('mongoose');
 
 var _mongoose2 = _interopRequireDefault(_mongoose);
 
-var _genres = require('./genres');
-
-var _genres2 = _interopRequireDefault(_genres);
-
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -19,20 +15,11 @@ function _interopRequireDefault(obj) {
 var Schema = _mongoose2.default.Schema;
 
 var MovieSchema = new Schema({
+    'image': {
+        type: String,
+        require: true
+    },
     'name': {
-        type: String,
-        require: true
-    },
-    'genre': {
-        type: _mongoose2.default.Schema.Types.ObjectId,
-        require: true,
-        ref: 'Genres'
-    },
-    'synopsis': {
-        type: String,
-        require: true
-    },
-    'cast': {
         type: String,
         require: true
     },
@@ -40,7 +27,33 @@ var MovieSchema = new Schema({
         type: Date,
         require: true
     },
-    'lenght': {
+    'rating': {
+        type: Schema.Types.ObjectId,
+        require: true,
+        ref: 'Ratings'
+    },
+    'genre': {
+        type: Schema.Types.ObjectId,
+        require: true,
+        ref: 'Genres'
+    },
+    'rank': {
+        type: [Number],
+        require: true
+    },
+    'synopsis': {
+        type: String,
+        require: true
+    },
+    'director': {
+        type: String,
+        require: true
+    },
+    'cast': {
+        type: String,
+        require: true
+    },
+    'duration': {
         type: String,
         require: true
     }

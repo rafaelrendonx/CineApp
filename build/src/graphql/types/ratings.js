@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.RatingUserType = exports.RatingType = undefined;
+exports.RatingInputType = exports.RatingType = undefined;
 
 var _graphql = require("graphql");
 
@@ -29,7 +29,7 @@ var RatingType = exports.RatingType = new graphql.GraphQLObjectType({
     }
 });
 
-var RatingUserType = exports.RatingUserType = new graphql.GraphQLInputObjectType({
+var RatingInputType = exports.RatingInputType = new graphql.GraphQLInputObjectType({
     name: "AddRatings",
     description: "Types of add Ratings",
     fields: function fields() {

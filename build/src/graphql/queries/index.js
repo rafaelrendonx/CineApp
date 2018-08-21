@@ -18,7 +18,7 @@ var _movies = require('./movies');
 
 var _movies2 = _interopRequireDefault(_movies);
 
-var _ratings = require('/ratings');
+var _ratings = require('./ratings');
 
 var _ratings2 = _interopRequireDefault(_ratings);
 
