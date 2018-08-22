@@ -17,7 +17,7 @@ export default {
         const {id, data} = params
         return Movie.findByIdAndUpdate(id, {$push:{rank:data.rank}})
             .then((movie) => {
-                return Movie.findById(movie.id),exec()
+                return Movie.findById(movie.id).exec()
             })
     }
 }

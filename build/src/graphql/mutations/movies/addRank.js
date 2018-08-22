@@ -34,7 +34,7 @@ exports.default = {
             data = params.data;
 
         return _movies2.default.findByIdAndUpdate(id, { $push: { rank: data.rank } }).then(function (movie) {
-            return _movies2.default.findById(movie.id), exec();
+            return _movies2.default.findById(movie.id).exec();
         });
     }
 };

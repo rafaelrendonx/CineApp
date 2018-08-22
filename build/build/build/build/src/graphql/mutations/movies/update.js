@@ -14,11 +14,11 @@ var _extends = Object.assign || function (target) {
     }return target;
 };
 
-var _genres = require('../../../schemas/genres');
+var _movies = require('../../../schemas/movies');
 
-var _genres2 = _interopRequireDefault(_genres);
+var _movies2 = _interopRequireDefault(_movies);
 
-var _movies = require('../../types/movies');
+var _movies3 = require('../../types/movies');
 
 var _graphql = require('graphql');
 
@@ -41,7 +41,7 @@ function _interopRequireDefault(obj) {
 }
 
 exports.default = {
-    type: _movies.MovieType,
+    type: _movies3.MovieType,
     args: {
         id: {
             name: 'ID',
@@ -49,12 +49,12 @@ exports.default = {
         },
         data: {
             name: 'data',
-            type: new graq.GraphQLNonNull(_movies.MovieInputType)
+            type: new graphql.GraphQLNonNull(_movies3.MovieInputType)
         }
     },
     resolve: function resolve(root, params) {
-        return _genres2.default.findByIdAndUpdate(params.id, { $set: _extends({}, params.data) }).then(function (movie) {
-            return _genres2.default.findById(movie.id).exec();
+        return _movies2.default.findByIdAndUpdate(params.id, { $set: _extends({}, params.data) }).then(function (movie) {
+            return _movies2.default.findById(movie.id).exec();
         }).catch(function (err) {
             return new Error("Coulnd't update Movie dara", err);
         });

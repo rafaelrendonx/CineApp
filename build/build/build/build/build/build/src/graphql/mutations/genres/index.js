@@ -22,6 +22,6 @@ function _interopRequireDefault(obj) {
 
 exports.default = {
     addGenre: _add2.default,
-    UpdateGenre: _update2.default,
+    updateGenre: _update2.default,
     deleteGenre: _delete2.default
 };

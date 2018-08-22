@@ -16,6 +16,10 @@ var _delete = require('./delete');
 
 var _delete2 = _interopRequireDefault(_delete);
 
+var _addRank = require('./addRank');
+
+var _addRank2 = _interopRequireDefault(_addRank);
+
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -23,5 +27,6 @@ function _interopRequireDefault(obj) {
 exports.default = {
     addMovie: _add2.default,
     UpdateMovie: _update2.default,
-    deleteMovie: _delete2.default
+    deleteMovie: _delete2.default,
+    addRank: _addRank2.default
 };

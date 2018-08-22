@@ -135,7 +135,7 @@ app.use('/verifytoken', JsonParser, (req, res) => {
 })
 
 //             MIDDLEWARE
-app.use('/graphql', (req,res,next) =>{
+/*app.use('/graphql', (req,res,next) =>{
 
     const token = req.headers['authorization']
     try{
@@ -146,7 +146,7 @@ app.use('/graphql', (req,res,next) =>{
             message: er.message
         })
     }
-})
+})*/
 
 app.use('/graphql', graphqlHTTP((req, res) => ({
     schema,
