@@ -14,8 +14,6 @@ var _graphql = require('graphql');
 
 var graphql = _interopRequireWildcard(_graphql);
 
-var _os = require('os');
-
 function _interopRequireWildcard(obj) {
     if (obj && obj.__esModule) {
         return obj;

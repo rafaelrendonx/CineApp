@@ -56,7 +56,7 @@ exports.default = {
         return _movies2.default.findByIdAndUpdate(params.id, { $set: _extends({}, params.data) }).then(function (movie) {
             return _movies2.default.findById(movie.id).exec();
         }).catch(function (err) {
-            return new Error("Coulnd't update Movie dara", err);
+            return new Error("Coulnd't update Movie data", err);
         });
     }
 };

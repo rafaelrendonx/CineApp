@@ -166,18 +166,18 @@ app.use('/verifytoken', JsonParser, function (req, res) {
 });
 
 //             MIDDLEWARE
-app.use('/graphql', function (req, res, next) {
+/*app.use('/graphql', (req,res,next) =>{
 
-    var token = req.headers['authorization'];
-    try {
-        req.user = (0, _verify.verifyToken)(token);
-        next();
-    } catch (er) {
+    const token = req.headers['authorization']
+    try{
+        req.user = verifyToken(token)
+        next()
+    } catch(er){
         res.status(401).json({
             message: er.message
-        });
+        })
     }
-});
+})*/
 
 app.use('/graphql', (0, _expressGraphql2.default)(function (req, res) {
     return {

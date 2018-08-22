@@ -61,7 +61,7 @@ db.on('error', function () {
 });
 
 app.listen(PORT, function () {
-    console.log('Server Works On PORT 3000');
+    console.log('Server Works On PORT ', PORT);
 });
 
 app.use((0, _cors2.default)());

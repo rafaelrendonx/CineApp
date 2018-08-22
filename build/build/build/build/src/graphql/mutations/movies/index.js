@@ -26,7 +26,7 @@ function _interopRequireDefault(obj) {
 
 exports.default = {
     addMovie: _add2.default,
-    UpdateMovie: _update2.default,
+    updateMovie: _update2.default,
     deleteMovie: _delete2.default,
     addRank: _addRank2.default
 };
