@@ -131,7 +131,7 @@ app.post('/register', JsonParser, function (req, res) {
     });
 });
 
-//Endpoit de Login
+//Endpoint de Login
 
 app.use('/login', JsonParser, function (req, res) {
     if (req.method === 'POST') {

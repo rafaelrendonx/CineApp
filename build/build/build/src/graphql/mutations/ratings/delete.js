@@ -40,7 +40,9 @@ exports.default = {
     },
     resolve: function resolve(root, params) {
         var deletedRating = _ratings2.default.findByIdAndRemove(params.id).exec();
-        if (!deletedRating) throw Error("Error on delete");
+        if (!deletedRating) {
+            throw Error("Error on delete");
+        }
         return deletedRating;
     }
 };

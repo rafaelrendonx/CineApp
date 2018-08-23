@@ -47,7 +47,7 @@ var MovieType = exports.MovieType = new graphql.GraphQLObjectType({
                 resolve: function resolve(movie) {
                     var rating = movie.rating;
 
-                    return _ratings3.default.findbyiD(rating).exec();
+                    return _ratings3.default.findById(rating).exec();
                 }
             },
             genre: {
@@ -55,7 +55,7 @@ var MovieType = exports.MovieType = new graphql.GraphQLObjectType({
                 resolve: function resolve(movie) {
                     var genre = movie.genre;
 
-                    return _genres3.default.findbyiD(genre).exec();
+                    return _genres3.default.findById(genre).exec();
                 }
             },
             rank: {
