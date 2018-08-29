@@ -12,7 +12,9 @@ export default {
     },
     resolve(root, params){
         const deletedRating = Rating.findByIdAndRemove(params.id).exec()
-        if (!deletedRating) throw Error("Error on delete")
+        if (!deletedRating){
+             throw Error("Error on delete")
+        }
         return deletedRating
     }
 }

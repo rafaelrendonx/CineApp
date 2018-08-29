@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _ratings = require('../../../schemas/ratings');
+var _users = require('../../../schemas/users');
 
-var _ratings2 = _interopRequireDefault(_ratings);
+var _users2 = _interopRequireDefault(_users);
 
-var _ratings3 = require('../../types/ratings');
+var _user = require('../../types/user');
 
 var _graphql = require('graphql');
 
@@ -19,7 +19,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-    type: _ratings3.RatingType,
+
+    type: _user.UserType,
     args: {
         id: {
             name: 'ID',
@@ -27,10 +28,8 @@ exports.default = {
         }
     },
     resolve: function resolve(root, params) {
-        var deletedRating = _ratings2.default.findByIdAndRemove(params.id).exec();
-        if (!deletedRating) {
-            throw Error("Error on delete");
-        }
-        return deletedRating;
+        var deletedUser = _users2.default.findByIdAndRemove(params.id).exec();
+        if (!deletedUser) throw Error("Error on delete User");
+        return deletedUser;
     }
 };

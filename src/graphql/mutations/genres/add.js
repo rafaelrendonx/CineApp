@@ -1,7 +1,6 @@
 import Genre from '../../../schemas/genres';
 import { GenreType, GenreInputType } from '../../types/genres';
 import * as graphql from 'graphql';
-import { networkInterfaces } from 'os';
 
 export default {
     type: GenreType,

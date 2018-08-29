@@ -5,7 +5,7 @@ export const GenreType = new graphql.GraphQLObjectType({
     description: "Genres in MongoDB",
     fields:() => ({
         _id: {
-            type: graphql. GraphQLNonNull(graphql.GraphQLID)
+            type: graphql.GraphQLNonNull(graphql.GraphQLID)
         },
         name: {
             type: graphql.GraphQLString

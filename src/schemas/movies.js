@@ -18,12 +18,12 @@ const MovieSchema = new Schema({
     'rating':{
         type: Schema.Types.ObjectId,
         require: true,
-        ref: 'Ratings'
+        ref: 'rating'
     },
     'genre':{
         type: Schema.Types.ObjectId,
         require: true,
-        ref: 'Genres'
+        ref: 'genre'
     },
     'rank':{
         type: [Number],

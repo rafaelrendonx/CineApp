@@ -24,14 +24,14 @@ export const MovieType = new graphql.GraphQLObjectType({
             type: RatingType,
             resolve(movie){
                 const { rating } = movie
-                return Rating.findbyiD(rating).exec()
+                return Rating.findById(rating).exec()
             }
         },
         genre:{
             type: GenreType,
             resolve(movie){
                 const { genre } = movie
-                return Genre.findbyiD(genre).exec()
+                return Genre.findById(genre).exec()
             }
         },
         rank: {

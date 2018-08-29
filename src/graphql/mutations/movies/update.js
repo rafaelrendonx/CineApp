@@ -17,6 +17,6 @@ export default{
     resolve(root, params){
         return Movie.findByIdAndUpdate(params.id,{$set:{...params.data}})
                          .then((movie) => Movie.findById(movie.id).exec())
-                         .catch((err) => new Error("Coulnd't update Movie dara", err))
+                         .catch((err) => new Error("Coulnd't update Movie data", err))
     }
 }

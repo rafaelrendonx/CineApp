@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./build/index.js",
-    "build":  "babel -d ./build . --ignore node_modules --copy-files",
-    "server":"nodemon index.js --exec babel-node --presets es2015,stage-2"
+    "build": "babel -d ./build . --ignore node_modules --copy-files",
+    "server": "nodemon index.js --exec babel-node --presets es2015,stage-2"
   },
   "author": "",
   "license": "ISC",
