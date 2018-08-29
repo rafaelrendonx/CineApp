@@ -17,6 +17,6 @@ function _interopRequireDefault(obj) {
 }
 
 exports.default = {
-    CreateToken: _create2.default,
-    VerifyToken: _verify2.default
+    createToken: _create2.default,
+    verifyToken: _verify2.default
 };

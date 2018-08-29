@@ -72,6 +72,12 @@ var MovieType = exports.MovieType = new graphql.GraphQLObjectType({
             },
             duration: {
                 type: graphql.GraphQLString
+            },
+            language: {
+                type: graphql.GraphQLString
+            },
+            url: {
+                type: graphql.GraphQLString
             }
         };
     }
@@ -106,6 +112,12 @@ var MovieInputType = exports.MovieInputType = new graphql.GraphQLInputObjectType
                 type: graphql.GraphQLString
             },
             duration: {
+                type: graphql.GraphQLString
+            },
+            language: {
+                type: graphql.GraphQLString
+            },
+            url: {
                 type: graphql.GraphQLString
             }
         };

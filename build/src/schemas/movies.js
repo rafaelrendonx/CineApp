@@ -54,6 +54,14 @@ var MovieSchema = new Schema({
     'duration': {
         type: String,
         require: true
+    },
+    'language': {
+        type: String,
+        require: true
+    },
+    'url': {
+        type: String,
+        require: true
     }
 }, { 'collection': 'movies', timestamps: true });
 

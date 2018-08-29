@@ -45,6 +45,14 @@ const MovieSchema = new Schema({
         type: String,
         require: true
     },
+    'language': {
+        type: String,
+        require: true
+    },
+    'url': {
+        type: String,
+        require: true
+    }
 },{'collection' : 'movies', timestamps : true});
 
 export default mongoose.model('movies', MovieSchema)

@@ -48,14 +48,12 @@ var createToken = exports.createToken = function createToken(email, password) {
                     var token = _jsonwebtoken2.default.sign(payload, secret, {
                         expiresIn: expiresIn
                     });
-
                     resolve(token);
                 } else {
                     reject(false);
                 }
             });
         });
-
         return compare;
     }).catch();
     return user;
